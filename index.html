@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ivy Marie Portuguez | Portfolio Website</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+</head>
+<body>
+<!---Navigation Bar--->
+
+    <nav id="desktop-nav">
+        <div class="logo">IVY.</div>
+    <div>
+        <ul class="nav-links"> 
+            <li><a href="#home"> HOME </a></li>
+            <li><a href="#about"> ABOUT </a></li>
+            <li><a href="#works"> WORKS </a></li>
+            <li><a href="#contact"> CONTACT </a></li>
+        </ul>
+    </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">IVY.</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="Menu()">
+                <span></span>
+                <span></span>
+                <span></span>
+        </div>
+            <div class="menu-links">
+                <li><a href="#home" onclick="Menu()"> HOME </a></li>
+                <li><a href="#about" onclick="Menu()"> ABOUT </a></li>
+                <li><a href="#works" onclick="Menu()"> WORKS </a></li>
+                <li><a href="#contact" onclick="Menu()"> CONTACT </a></li>
+            </div>
+        </div>
+    </nav>
+
+<!--- My Profile--->
+
+    <section id="profile">
+        <div class="section_pic_container">
+            <img src="assets/dp.png" alt="Profile Picture"/>
+        </div>
+        <div class="section_text">
+            <p class="section_text_p1"> Hello! I am</p>
+            <h1 class="title">Ivy Marie Portuguez</h1>
+            <p class="section_text_p2">Web Developer</p>
+            <div class="btn-container">
+                <button 
+                class="btn btn-color-1"
+                onclick="location.href='https://ivy-marie.github.io/online-resume/'"
+                > View Resume
+            </button>
+            <button 
+                class="btn btn-color-2"
+                onclick="location.href='#contact'"
+                > Contact Me
+            </button>
+            </div>
+            <div id="social-container">
+                <img src="assets/linkedin.png" alt="LinkedIn Profile" class="icon"
+                onclick="location.href='www.linkedin.com/in/ivy-marie-portuguez-78b577179'"
+                />
+                <img src="assets/github.png" alt="Github Profile" class="icon"
+                onclick="location.href='https://github.com/ivy-marie'" 
+                />
+            </div>
+        </div>
+    </section>
+
+<!---About Me--->
+    <section id="about">
+        <p class="section_text_p1">Get To Know More</p>
+        <h1 class="title"> 〔 About Me 〕</h1>
+        <div class="section-container">
+            <div class="section_pic_container">
+                <img src="assets/dp1.png" alt="Profile Picture" class="about-pic"/>
+            </div>
+
+                <div class="text-container">
+                    <p>Hello, my name is Ivy Marie, and I’m currently 3rd year IT student at Dalubhasaan ng Lungsod ng Lucena. 
+                    <br>I have experience with several programming languages, including  Python, Javascript and SQL. 
+                        I’m particularly interested in Web Developing, and I’m currently working on a project that involves developing a Portfolio Website.
+                    </div>
+            </div>
+
+        </div>
+    </section>
+
+<!---My recent works--->
+<section id="works">
+        <p class="section_text_p1"> Browse My Recent</p>
+        <h1 class="title"> ｛ Work$ ｝</h1>
+
+        <div class="row">
+            <div class="column">
+              <div class="card">
+                <img src="assets/resume.PNG" alt="Online Resume" class="work-img"/>
+                <h2 class="work-name"> Online Resume</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ivy-marie/online-resume'"> Source Code </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://ivy-marie.github.io/online-resume/'"> Live Demo </button>
+                </div>
+              </div>
+            </div>
+          
+            
+            <div class="column">
+              <div class="card">
+                <img src="assets/calculator.PNG" alt="Working Calculator" class="work-img"/>
+                <h2 class="work-name">Calculator</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ivy-marie/Working-Calculator'"> Source Code </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://ivy-marie.github.io/Working-Calculator/'"> Live Demo </button>
+                </div>
+              </div>
+            </div>
+            
+            <div class="column">
+              <div class="card">
+                <img src="assets/todolist.PNG" alt="To Do List" class="work-img"/>
+                <h2 class="work-name"> To Do List</h2>
+                <div class="btn-container">
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://github.com/ivy-marie/Todo-List-App'"> Source Code </button>
+                    <button class="btn btn-color-2 project-btn" onclick="location.href='https://ivy-marie.github.io/Todo-List-App/'"> Live Demo </button>
+                </div>
+              </div>
+            </div>
+          </div>
+</section>
+
+<!---Contact--->
+    <section id="contact">
+        <p class="section_text_p1"> Get In Touch</p>
+        <h1 class="title"> 「 Contact Me 」</h1>
+
+        <form onsubmit="sendEmail(); reset(); return false;">
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Full Name" id="name" 
+                    class="item" autocomplete="off">
+                    <div class="error-txt">Full Name can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Email Address" id="email" 
+                    class="item" autocomplete="off">
+                    <div class="error-txt email">Email Address can't be blank</div>
+                </div>
+            </div>
+
+            <div class="input-box">
+                <div class="input-field field">
+                    <input type="text" placeholder="Phone Number" id="phone" 
+                    class="item" autocomplete="off">
+                    <div class="error-txt">Phone Number can't be blank</div>
+                </div>
+                <div class="input-field field">
+                    <input type="text" placeholder="Subject" id="subject" 
+                    class="item" autocomplete="off">
+                    <div class="error-txt">Subject can't be blank</div>
+                </div>
+            </div>
+
+            <div class="textarea-field field">
+                <textarea name="" id="message" cols="25" rows="5" placeholder="Your Message" class="item" autocomplete="off">
+                </textarea>
+            </div>
+
+            <button type="submit" class="btn btn-color-2">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p class="copyright">Copyright © 2024 | All Rights Reserved </p>
+        <p class="developer">Developed by <a href="https://github.com/ivy-marie" target="_blank">Ivy Marie R. Portuguez</a></p>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="script.js"></script>
+
+</body>
+</html>
